@@ -20,17 +20,27 @@ call plug#begin('$LOCALAPPDATA/nvim')
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug 'mhartington/oceanic-next'
-
-" Plug 'ryanoasis/vim-devicons'
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'mhartington/oceanic-next'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'kshenoy/vim-signature'
+
+" Plug 'OmniSharp/omnisharp-vim'
+
+" Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" OmniSharp "
+" filetype plugin on
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
