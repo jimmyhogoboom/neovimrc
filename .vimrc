@@ -17,9 +17,17 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+" vim-airline
+" TODO: This doesn't seem to work properly.
+" 	Should have arrow separators.
+" TODO: Find a good matching theme.
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
 
 " oceanic-next
 " For Neovim 0.1.3 and 0.1.4
