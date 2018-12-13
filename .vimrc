@@ -4,14 +4,17 @@ set ruler
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-call plug#begin('~/nvim/plugged')
+syntax enable
+
+" call plug#begin('~/nvim/plugged')
+call plug#begin('$LOCALAPPDATA/nvim')
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'mhartington/oceanic-next'
 
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -26,8 +29,9 @@ call plug#end()
 " 	Should have arrow separators.
 " TODO: Find a good matching theme.
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme='solarized'
+" let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
+let g:aireline_powerline_fonts = 1
 
 " oceanic-next
 " For Neovim 0.1.3 and 0.1.4
@@ -39,14 +43,9 @@ if (has("termguicolors"))
 endif
 
 " Theme
-syntax enable
 colorscheme OceanicNext
-
-" syntax on
-  let g:oceanic_next_terminal_bold = 1
-  let g:oceanic_next_terminal_italic = 1
-  colorscheme OceanicNext
-
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
 
 map <C-n> :NERDTreeToggle<CR>
 
