@@ -13,6 +13,11 @@ Plug 'mhartington/oceanic-next'
 
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+Plug 'vim-airline/vim-airline'
+
 call plug#end()
 
 
@@ -38,3 +43,5 @@ colorscheme OceanicNext
 map <C-n> :NERDTreeToggle<CR>
 
 map <Space> :noh<CR>
+
+map f :Files<CR>
