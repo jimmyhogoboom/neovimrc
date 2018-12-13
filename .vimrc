@@ -3,6 +3,14 @@ syntax enable
 set number
 set ruler
 
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+
+" Highlight current line
+set cursorline
+
 inoremap jk <Esc>
 inoremap kj <Esc>
 
@@ -24,13 +32,15 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " vim-airline "
 " TODO: This doesn't seem to work properly.
 " 	Should have arrow separators.
 " TODO: Find a good matching theme.
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 " let g:airline_theme='solarized'
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 let g:airline_right_alt_sep = ''
@@ -42,12 +52,14 @@ let g:airline_left_sep = ''
 
 " oceanic-next "
 " For Neovim 0.1.3 and 0.1.4
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Or if you have Neovim >= 0.1.5
 if (has("termguicolors"))
  set termguicolors
 endif
+
+set background=dark
 
 " Theme
 colorscheme OceanicNext
@@ -61,3 +73,9 @@ map <C-n> :NERDTreeToggle<CR>
 map <Space> :noh<CR>
 
 map f :Files<CR>
+
+" elite mode - arrows resize splits
+nnoremap <Up>    :resize +2<CR>
+nnoremap <Down>  :resize -2<CR>
+nnoremap <Left>  :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
