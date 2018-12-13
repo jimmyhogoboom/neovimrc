@@ -9,13 +9,31 @@ set smarttab
 set expandtab
 
 set nowrap
+
+" Show the current file name in the titlebar
 set title
+
+" Some stuff for autocomplete
+set wildmenu
+set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn
+
+" For HTML tag matching
+set matchpairs+=<:>
 
 " Highlight current line
 set cursorline
 
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+" Turn off search highlighting for last search
+map <Space> :noh<CR>
+
+" elite mode - arrows resize splits
+nnoremap <Up>    :resize +2<CR>
+nnoremap <Down>  :resize -2<CR>
+nnoremap <Left>  :vertical resize +2<CR>
+nnoremap <Right> :vertical resize -2<CR>
 
 " call plug#begin('~/nvim/plugged')
 call plug#begin('$LOCALAPPDATA/nvim')
@@ -83,12 +101,5 @@ let g:oceanic_next_terminal_italic = 1
 
 map <C-n> :NERDTreeToggle<CR>
 
-map <Space> :noh<CR>
-
 map f :Files<CR>
 
-" elite mode - arrows resize splits
-nnoremap <Up>    :resize +2<CR>
-nnoremap <Down>  :resize -2<CR>
-nnoremap <Left>  :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
