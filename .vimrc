@@ -35,6 +35,8 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
+" This has some more tips for settings: https://stackoverflow.com/a/2559262/370539
+
 " call plug#begin('~/nvim/plugged')
 call plug#begin('$LOCALAPPDATA/nvim')
 
