@@ -9,6 +9,7 @@ set smarttab
 set expandtab
 
 set nowrap
+set title
 
 " Highlight current line
 set cursorline
