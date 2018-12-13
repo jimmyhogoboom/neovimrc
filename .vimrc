@@ -8,6 +8,8 @@ set shiftwidth=4
 set smarttab
 set expandtab
 
+set nowrap
+
 " Highlight current line
 set cursorline
 
