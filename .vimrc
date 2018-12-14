@@ -1,3 +1,8 @@
+
+" TODO: Take some pointers from https://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html
+" TODO: Use https://github.com/Shougo/deoplete.nvim instead of neocomplete
+" TODO: Finish configuring OmniSharp, and do this: https://github.com/OmniSharp/omnisharp-vim/wiki/Code-Actions-Available-flag
+
 syntax enable
 
 set number
