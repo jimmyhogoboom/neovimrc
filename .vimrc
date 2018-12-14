@@ -120,22 +120,6 @@ nnoremap <Leader>th :OmniSharpHighlightTypes<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" vim-airline "
-" TODO: This doesn't seem to work properly.
-" 	Should have arrow separators.
-" TODO: Find a good matching theme.
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme='distinguished'
-let g:airline_powerline_fonts = 1
-
-let g:airline_right_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep= ''
-let g:airline_left_sep = ''
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " oceanic-next "
 " For Neovim 0.1.3 and 0.1.4
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -153,9 +137,26 @@ let g:airline_left_sep = ''
 " let g:oceanic_next_terminal_italic = 1
 
 colorscheme codedark
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim-airline "
+" TODO: This doesn't seem to work properly.
+" 	Should have arrow separators.
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_theme='distinguished'
+let g:airline_powerline_fonts = 1
+
+let g:airline_right_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep= ''
+let g:airline_left_sep = ''
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeMinimalUI = v:true
 
 map f :Files<CR>
 
