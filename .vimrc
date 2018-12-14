@@ -46,7 +46,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -73,7 +73,7 @@ call plug#end()
 " TODO: Find a good matching theme.
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-" let g:airline_theme='solarized'
+let g:airline_theme='distinguished'
 let g:airline_powerline_fonts = 1
 
 let g:airline_right_alt_sep = ''
@@ -88,17 +88,18 @@ let g:airline_left_sep = ''
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Or if you have Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
+" if (has("termguicolors"))
+ " set termguicolors
+" endif
 
-set background=dark
+" set background=dark
 
 " Theme
-colorscheme OceanicNext
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
+" colorscheme OceanicNext
+" let g:oceanic_next_terminal_bold = 1
+" let g:oceanic_next_terminal_italic = 1
 
+colorscheme arcadia
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <C-n> :NERDTreeToggle<CR>
