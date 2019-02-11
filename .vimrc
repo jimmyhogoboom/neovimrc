@@ -158,6 +158,12 @@ let g:airline_right_sep = ''
 let g:airline_left_alt_sep= ''
 let g:airline_left_sep = ''
 
+" TODO: ensure the following two settings work properly
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 map <C-n> :NERDTreeToggle<CR>
