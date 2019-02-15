@@ -6,7 +6,7 @@ create init.vim in AppData/Local/nvim
 ```
 set runtimepath^=./vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-source ~/neovimrc/.vimrc
+source ~/neovimrc/.vimrc " or %userprofile%/neovimrc/.vimrc depending on where you put it
 ```
 
 create autoload/ in AppData/Local/nvim, Download vim-plug there
