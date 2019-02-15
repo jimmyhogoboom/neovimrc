@@ -1,4 +1,8 @@
-Installing on windows:
+To use this setup, install Neovim and Vundle.
+
+---
+
+#### Installing on windows:
 
 install with chocolatey
 
@@ -9,11 +13,7 @@ let &packpath = &runtimepath
 source ~/neovimrc/.vimrc
 ```
 
-create autoload/ in AppData/Local/nvim, Download vim-plug there
-
-change `call plug#begin('~/nvim/plugged')` to 
-`call plug#begin('$LOCALAPPDATA/nvim')`
-
+If you get an error with the OmniSharp plugin "`Error: OmniSharp requires Vim compiled with +python or +python3`", you need to run `pip3 install --user --upgrade neovim`.
 
 To add a right-click shortcut:
 https://www.howtogeek.com/107965/how-to-add-any-application-shortcut-to-windows-explorers-context-menu/
