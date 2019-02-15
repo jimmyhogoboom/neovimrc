@@ -42,28 +42,46 @@ nnoremap <Right> :vertical resize -2<CR>
 
 " This has some more tips for settings: https://stackoverflow.com/a/2559262/370539
 
-" call plug#begin('~/nvim/plugged')
-call plug#begin('$LOCALAPPDATA/nvim')
 
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle and Plugin setup "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Plug 'mhartington/oceanic-next'
-Plug 'tomasiser/vim-code-dark'
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-Plug 'kshenoy/vim-signature'
 
-Plug 'OmniSharp/omnisharp-vim'
+" Plugin list "
 
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" Plugin 'mhartington/oceanic-next'
+Plugin 'tomasiser/vim-code-dark'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'kshenoy/vim-signature'
+
+Bundle 'OmniSharp/omnisharp-vim'
+
+" TODO: Fix
 " Plug 'ryanoasis/vim-devicons'
 
-call plug#end()
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
