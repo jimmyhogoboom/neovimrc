@@ -81,8 +81,18 @@ Plugin 'kshenoy/vim-signature'
 
 " Bundle 'OmniSharp/omnisharp-vim'
 
+" JavaScript and React plugins
+" (https://drivy.engineering/setting-up-vim-for-react/)
+" Syntax highlighting
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+" JSX tag expansion (e.g. typeing 'p.description<Tab>' expands to
+" <p className="description"></p>
+Plugin 'mattn/emmet-vim'
+" Syntax checking
+Plugin 'w0rp/ale'
+" Autoformatting async
+Plugin 'skywind3000/asyncrun.vim'
 
 " TODO: Fix
 " Plug 'ryanoasis/vim-devicons'
@@ -201,6 +211,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 map <C-n> :NERDTreeToggle<CR>
 " let g:NERDTreeMinimalUI = v:true
 
-" This is for the fzf plugin I think, which can be removed.
-" map f :Files<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Automatically run Prettier on .js files
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 
