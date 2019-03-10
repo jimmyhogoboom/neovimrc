@@ -40,6 +40,12 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
+" Auto-reload .vimrc on save
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
 " This has some more tips for settings: https://stackoverflow.com/a/2559262/370539
 
 
@@ -73,7 +79,10 @@ Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'kshenoy/vim-signature'
 
-Bundle 'OmniSharp/omnisharp-vim'
+" Bundle 'OmniSharp/omnisharp-vim'
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 " TODO: Fix
 " Plug 'ryanoasis/vim-devicons'
