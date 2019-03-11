@@ -93,6 +93,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'w0rp/ale'
 " Autoformatting async
 Plugin 'skywind3000/asyncrun.vim'
+" Autocomplete
+Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 " TODO: Fix
 " Plug 'ryanoasis/vim-devicons'
