@@ -46,6 +46,11 @@ augroup myvimrc
     au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
+"if has('gui_running')
+    "set guifont=Fira\ Code:cANSI
+    "set guifont=Consolas:h11:cANSI
+"endif
+
 " This has some more tips for settings: https://stackoverflow.com/a/2559262/370539
 
 
@@ -195,12 +200,12 @@ colorscheme codedark
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='distinguished'
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
-let g:airline_right_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_left_alt_sep= ''
-let g:airline_left_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_right_sep = ''
+" let g:airline_left_alt_sep= ''
+" let g:airline_left_sep = ''
 
 " TODO: ensure the following two settings work properly
 " Enable the list of buffers
