@@ -31,6 +31,9 @@ set cursorline
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+" Disable :wq because I only ever hit it by accident
+cabbrev wq w
+
 " Turn off search highlighting for last search
 map <Space> :noh<CR>
 
@@ -99,7 +102,15 @@ Plugin 'w0rp/ale'
 " Autoformatting async
 Plugin 'skywind3000/asyncrun.vim'
 " Autocomplete
-Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+" Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+if has('nvim')
+    Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 
 " TODO: Fix
 " Plug 'ryanoasis/vim-devicons'
