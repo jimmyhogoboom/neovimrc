@@ -89,11 +89,14 @@ Plugin 'kshenoy/vim-signature'
 
 " Bundle 'OmniSharp/omnisharp-vim'
 
-" JavaScript and React plugins
+"** JavaScript and React plugins **"
+""""""""""""""""""""""""""""""""""""
 " (https://drivy.engineering/setting-up-vim-for-react/)
 " Syntax highlighting
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+" Vue syntax
+Plugin 'posva/vim-vue'
 " JSX tag expansion (e.g. typeing 'p.description<Tab>' expands to
 " <p className="description"></p>
 Plugin 'mattn/emmet-vim'
@@ -102,20 +105,24 @@ Plugin 'w0rp/ale'
 " Autoformatting async
 Plugin 'skywind3000/asyncrun.vim'
 " Autocomplete
+
+
 " Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-if has('nvim')
-    Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+"if has('nvim')
+"    Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+"    Plug 'Shougo/deoplete.nvim'
+"    Plug 'roxma/nvim-yarp'
+"    Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+"let g:deoplete#enable_at_startup = 1
 
 " TODO: Fix
 " Plug 'ryanoasis/vim-devicons'
 
 
+"** END JavaScript and React plugins **"
+""""""""""""""""""""""""""""""""""""
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
