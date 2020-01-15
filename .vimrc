@@ -1,15 +1,13 @@
 
 " TODO: Take some pointers from https://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html
-" TODO: Use https://github.com/Shougo/deoplete.nvim instead of neocomplete
-" TODO: Finish configuring OmniSharp, and do this: https://github.com/OmniSharp/omnisharp-vim/wiki/Code-Actions-Available-flag
 
 syntax enable
 
 set number
 set ruler
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set expandtab
 
@@ -17,10 +15,6 @@ set nowrap
 
 " Show the current file name in the titlebar
 set title
-
-" Some stuff for autocomplete
-set wildmenu
-set wildignore=*.o,*.obj,*.bak,*.exe,*.py[co],*.swp,*~,*.pyc,.svn
 
 " For HTML tag matching
 set matchpairs+=<:>
@@ -50,8 +44,8 @@ augroup myvimrc
 augroup END
 
 "if has('gui_running')
-    "set guifont=Fira\ Code:cANSI
-    "set guifont=Consolas:h11:cANSI
+"    set guifont=Fira\ Code:cANSI
+"    set guifont=Consolas:h11:cANSI
 "endif
 
 " This has some more tips for settings: https://stackoverflow.com/a/2559262/370539
@@ -94,13 +88,21 @@ Plugin 'kshenoy/vim-signature'
 " Syntax highlighting
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'ianks/vim-tsx'
+
 " JSX tag expansion (e.g. typeing 'p.description<Tab>' expands to
 " <p className="description"></p>
 Plugin 'mattn/emmet-vim'
+let g:user_emmet_leader_key='<Tab>'
+"let g:user_emmet_settings = { 'javascript.jsx' : { 'extends' : 'jsx' } }
+
 " Syntax checking
 Plugin 'w0rp/ale'
+
 " Autoformatting async
 Plugin 'skywind3000/asyncrun.vim'
+
 " Autocomplete
 " Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 if has('nvim')
@@ -232,5 +234,5 @@ map <C-n> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Automatically run Prettier on .js files
-autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+" autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
 
