@@ -113,6 +113,19 @@ else
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
 let g:deoplete#enable_at_startup = 1
+" Automatically close scratch window after complete
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible()? "\<c-n>" : "\<tab>"
+inoremap <expr><S-tab> pumvisible()? "\<c-p>" : "\<tab>"
+
+" tern TODO: get working, see https://gregjs.com/vim/2016/configuring-the-deoplete-asynchronous-keyword-completion-plugin-with-tern-for-vim/
+" Plugin 'ternjs/tern_for_vim', { 'do': 'npm install' }
+" if exists('g:plugs["tern_for_vim"]')
+"   let g:tern_show_argument_hints = 'on_hold'
+"   let g:tern_show_signature_in_pum = 1
+"   autocmd FileType javascript setlocal omnifunc=tern#Complete
+" endif
 
 " TODO: Fix
 " Plug 'ryanoasis/vim-devicons'
