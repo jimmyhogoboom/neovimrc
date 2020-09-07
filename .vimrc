@@ -28,8 +28,14 @@ set matchpairs+=<:>
 " Highlight current line
 set cursorline
 
-inoremap jk <Esc>
-inoremap kj <Esc>
+" Using Ctrl+[ instead
+" inoremap jk <Esc>
+" inoremap kj <Esc>
+
+nmap <C-h> 10h;
+nmap <C-j> 10j;
+nmap <C-k> 10k;
+nmap <C-l> 10l;
 
 " Disable :wq because I only ever hit it by accident
 cabbrev wq w
@@ -90,6 +96,10 @@ Plugin 'kshenoy/vim-signature'
 " Bundle 'OmniSharp/omnisharp-vim'
 
 " JavaScript and React plugins
+
+" Vue
+Plugin 'posva/vim-vue'
+
 " (https://drivy.engineering/setting-up-vim-for-react/)
 " Syntax highlighting
 Plugin 'pangloss/vim-javascript'
